@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ДЗ 30. Гамбургеры</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">БУРГЕР МЕНЮ</h1>
+
+    <div class="mb-4">
+        <h2>Выберите размер гамбургера</h2>
+        <div class="form-check">
+            <input type="radio" id="small" name="size" value="small" class="form-check-input" checked>
+            <label for="small" class="form-check-label">Маленький (50 тугриков, 20 калорий)</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" id="large" name="size" value="large" class="form-check-input">
+            <label for="large" class="form-check-label">Большой (100 тугриков, 40 калорий)</label>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <h2>Выберите начинку</h2>
+        <div class="form-check">
+            <input type="radio" id="cheese" name="topping" value="cheese" class="form-check-input">
+            <label for="cheese" class="form-check-label">Сыр (+10 тугриков, +20 калорий)</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" id="salad" name="topping" value="salad" class="form-check-input">
+            <label for="salad" class="form-check-label">Салат (+20 тугриков, +5 калорий)</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" id="potato" name="topping" value="potato" class="form-check-input">
+            <label for="potato" class="form-check-label">Картофель (+15 тугриков, +10 калорий)</label>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <h2>Выберите добавки</h2>
+        <div class="form-check">
+            <input type="checkbox" id="spice" value="spice" class="form-check-input">
+            <label for="spice" class="form-check-label">Посыпать приправой (+15 тугриков, 0 калорий)</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" id="mayo" value="mayo" class="form-check-input">
+            <label for="mayo" class="form-check-label">Полить майонезом (+20 тугриков, +5 калорий)</label>
+        </div>
+    </div>
+
+    <button class="btn btn-danger mb-4" onclick="calculate()">Рассчитать</button>
+    <button class="btn btn-secondary mb-4" onclick="clearSelection()">Очистить</button>
+
+
+    <h2>Результаты</h2>
+    <p id="result-price">Стоимость: </p>
+    <p id="result-calories">Калорийность: </p>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/function.js"></script>
+<script src="js/Hamburger.js"></script>
+</body>
+</html>
